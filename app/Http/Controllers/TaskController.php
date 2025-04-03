@@ -113,7 +113,8 @@ class TaskController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Task $task)
-    {
+    {   
+        
         $this->authorize('delete', $task);
         $task->delete();
 
